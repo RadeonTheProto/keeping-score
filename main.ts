@@ -14,8 +14,23 @@ input.onButtonPressed(Button.B, function () {
     basic.showString("TEAM 2 HAS SCORED")
     basic.clearScreen()
 })
-let Team_one = 0
+input.onGesture(Gesture.Shake, function () {
+    if (Team_one != Team_two) {
+        basic.showString("Team one has")
+        basic.showString("" + (Team_one))
+        basic.showString("points")
+        basic.pause(2000)
+        basic.showString("Team two has")
+        basic.showString("" + (Team_two))
+        basic.showString("points")
+    } else {
+        basic.showString("The teams are tied")
+    }
+})
 let Team_two = 0
+let Team_one = 0
+Team_one = 0
+Team_two = 0
 basic.forever(function () {
 	
 })
