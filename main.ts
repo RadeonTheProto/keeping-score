@@ -23,6 +23,7 @@ input.onGesture(Gesture.Shake, function () {
         basic.showString("Team two has")
         basic.showString("" + (Team_two))
         basic.showString("points")
+        basic.clearScreen()
     } else {
         basic.showString("The teams are tied")
     }
